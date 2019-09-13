@@ -1,0 +1,18 @@
+server:
+  port: 7004
+    
+spring:
+   application:
+    name: boss-human    # 微服务名称
+                                        
+eureka: 
+ client: #注册到eureka服务器内
+   service-url:       ###注册进相对应的eureka注册中心，想让该服务注册到什么下就填写上对应的服务器路径
+    #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+        ##以上是集群版，监听整个eureka,如果上述其中一个宕机，
+        ##那么其他的还可以使用，只不过在宕机的本地缓存消失了，需要在新的机器上重新读取
+     defaultZone: http://localhost:7003/eureka/  #单机版
+ instance:
+  instance-id: boss-human       #histrix断融 修改微服务的名称  注意：不要使用下划线
+  prefer-ip-address: true #提示路径可以显示ip号，默认不修改是xxxx/info
+
