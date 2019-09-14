@@ -9,4 +9,6 @@ eureka:
  instance:
   instance-id: boss-human       #histrix断融 修改微服务的名称  注意：不要使用下划线
   prefer-ip-address: true #提示路径可以显示ip号，默认不修改是xxxx/info
+  
+hello: mamingcong
 
